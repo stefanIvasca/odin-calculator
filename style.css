@@ -1,0 +1,40 @@
+body{
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: rgb(245, 245, 245);
+    width: 400px;
+    height: 450px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.15),
+                -3px -3px 8px rgba(0,0,0,0.15);
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.screen{
+    background-color: white;
+    height: 90px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    padding: 10px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+button{
+    height:70px;
+    cursor: pointer;
+    font-size: 20px;
+}

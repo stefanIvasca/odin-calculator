@@ -1,15 +1,13 @@
-function add(firstNum,secondNum){
-    return firstNum+secondNum;
+function operate(operator,firstNum,secondNum){
+    if(operator==='+'){
+        return firstNum+secondNum;
+    }else if(operator==='-'){
+        return firstNum-secondNum;
+    }else if(operator==='*'){
+        return firstNum*secondNum;
+    }else if(operator==='/'){
+        return firstNum/secondNum;
+    }
 }
 
-function subtract(firstNum,secondNum){
-    return firstNum-secondNum;
-}
-
-function multiply(firstNum,secondNum){
-    return firstNum*secondNum;
-}
-
-function divide(firstNum,secondNum){
-    return firstNum/secondNum;
-}
+console.log(operate('+',7,9));

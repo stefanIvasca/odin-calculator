@@ -1,15 +1,3 @@
-function operate(operator,firstNum,secondNum){
-    if(operator==='+'){
-        return firstNum+secondNum;
-    }else if(operator==='-'){
-        return firstNum-secondNum;
-    }else if(operator==='*'){
-        return firstNum*secondNum;
-    }else if(operator==='/'){
-        return firstNum/secondNum;
-    }
-}
-
 let id=document.querySelectorAll('button');
 let screenValue=document.querySelector('.eventDisplay');
 let result=document.querySelector('.result');
@@ -21,18 +9,23 @@ let operator='';
 
 function displayValue(indexNum){
     if (operator===''){
-    firstNum+=id[indexNum].innerText;
-    screenValue.innerText=firstNum;
+        firstNum+=id[indexNum].innerText;
+        screenValue.innerText=firstNum;
+    }
+    else if(operator!==''&&result.innerText!==''){
+        firstNum=+result.innerText;
+        secondNum+=id[indexNum].innerText;
+        screenValue.innerText=secondNum;
     }else{
-    secondNum+=id[indexNum].innerText;
-    screenValue.innerText=secondNum;
+        secondNum+=id[indexNum].innerText;
+        screenValue.innerText=secondNum;
     }
 }
 
 function displayOperator(indexNum){
-    screenValue.innerText=id[indexNum].innerText;
+    screenValue.innerText=id[indexNum].innerText;//display symbol
     operator=id[indexNum].innerText;
-    console.log(operator);
+    secondNum='';//reset second num
 }
 
 function clearDisplay(){
@@ -41,17 +34,16 @@ function clearDisplay(){
     secondNum='';
     operator='';
     result.innerText='';
-
 }
 
 function returnResult(){
     if(operator==='+'){
-        result.innerText= +firstNum+ +secondNum;
+        result.innerText=Math.round((+firstNum+ +secondNum)*100)/100;
     }else if(operator==='−'){
-        result.innerText= +firstNum- +secondNum;
+        result.innerText=Math.round(( +firstNum- +secondNum)*100)/100;
     }else if(operator==='×'){
-        result.innerText= +firstNum* +secondNum;
+        result.innerText=Math.round(( +firstNum* +secondNum)*100)/100;
     }else if(operator==='÷'){
-        result.innerText= +firstNum/ +secondNum;
+        result.innerText=Math.round(( +firstNum/ +secondNum)*100)/100;
     }
 }

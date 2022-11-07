@@ -31,9 +31,12 @@ main{
 }
 
 button{
+    background-color: rgb(211, 211, 211);
     height:70px;
     cursor: pointer;
     font-size: 20px;
+    border:none;
+    border-radius: 6px;
 }
 
 .eventDisplay{
@@ -43,4 +46,10 @@ button{
 .result{
     margin-top:18px;
     text-align: right;
+}
+
+.notNumbers{
+    background-color: rgb(150, 150, 150);
+    border:none;
+    border-radius: 6px;
 }

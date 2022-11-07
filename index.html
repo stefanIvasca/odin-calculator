@@ -10,23 +10,27 @@
 </head>
 <body>
     <main>
-        <div class="screen">aaa</div>
+        <div class="screen">
+        <div class="eventDisplay"></div>
+        <div class="result"></div>
+        </div>
         <div class="buttons">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>C</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>&plus;</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>&minus;</button>
-            <button>&times;</button>
-            <button>0</button>
-            <button>&divide;</button>
+            <button onclick="displayValue(0)">1</button>
+            <button onclick="displayValue(1)">2</button>
+            <button onclick="displayValue(2)">3</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="displayValue(4)">4</button>
+            <button onclick="displayValue(5)">5</button>
+            <button onclick="displayValue(6)">6</button>
+            <button onclick="displayOperator(7)">&plus;</button>
+            <button onclick="displayValue(8)">7</button>
+            <button onclick="displayValue(9)">8</button>
+            <button onclick="displayValue(10)">9</button>
+            <button onclick="displayOperator(11)">&minus;</button>
+            <button onclick="displayOperator(12)">&times;</button>
+            <button onclick="displayValue(13)">0</button>
+            <button onclick="displayOperator(14)">&divide;</button>
+            <button onclick="returnResult()">&equals;</button>
         </div>
     </main>
 </body>
